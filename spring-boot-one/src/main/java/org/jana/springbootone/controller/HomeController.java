@@ -19,18 +19,4 @@ public class HomeController {
         return "sample get results -";
     }
 
-    @RequestMapping("/pets")
-    public String getPets() {
-        System.out.println("getPets()");
-        return "pets";
-    }
-
-    @RequestMapping(value = "/vpets", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Pet> getPetsValue() {
-        System.out.println("vpets");
-        Pet pet = new Pet();
-        pet.setId(1);
-        return ResponseEntity.ok().body(pet);
-    }
-
 }
