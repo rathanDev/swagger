@@ -18,6 +18,12 @@ public class ProductController {
         return new ResponseEntity("ProductController index", HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public ResponseEntity getProduct() {
+        System.out.println("Get product");
+        return new ResponseEntity("Here are the products", HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ResponseEntity saveProduct(@RequestBody Product product) {
         System.out.println("Save product - " + product);
